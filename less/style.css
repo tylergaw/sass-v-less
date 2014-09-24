@@ -1,0 +1,30 @@
+/* Extend example */
+.common-button,
+.small-button,
+.med-red-button,
+.big-button {
+  background-color: blue;
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+}
+.common-button:hover,
+.small-button:hover {
+  background-color: black;
+}
+.small-button {
+  font-size: 0.8em;
+}
+.med-red-button {
+  background-color: red;
+  font-size: 1.1em;
+}
+.big-button {
+  font-size: 1.6em;
+}
+/* rgba() without rgba example */
+/* NOPE */
+/* Functions man */
+.sidebar {
+  width: 59.25925926%;
+}

@@ -1,0 +1,45 @@
+/* Extend example */
+
+.common-button {
+  background-color: blue;
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+
+  &:hover {
+    background-color: black;
+  }
+}
+
+.small-button {
+  &:extend(.common-button all);
+  font-size: 0.8em;
+}
+
+.med-red-button {
+  &:extend(.common-button);
+  background-color: red;
+  font-size: 1.1em;
+}
+
+.big-button {
+  &:extend(.common-button);
+  font-size: 1.6em;
+}
+
+/* rgba() without rgba example */
+/* NOPE */
+// .semi-transparent {
+//   background-color: rgba(#fff, 0.9);
+//   color: rgba(blue, 0.8);
+// }
+
+/* Functions man */
+.calc-percent (@target, @context) {
+  @calc-percent: (@target / @context) * 100%;
+}
+
+.sidebar {
+  .calc-percent(640, 1080);
+  width: @calc-percent;
+}
